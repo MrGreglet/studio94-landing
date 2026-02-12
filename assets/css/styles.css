@@ -1,0 +1,113 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Hero section with background image */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../img/site94.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Dark translucent overlay for readability */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.35);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 1rem;
+    padding-top: 77.5vh;
+}
+
+/* Call-to-action button */
+.cta-button {
+    display: inline-block;
+    padding: 0.75rem 1.75rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #1a1a1a;
+    border: 2px solid #ffffff;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+/* Hover state */
+.cta-button:hover {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Focus state for keyboard navigation */
+.cta-button:focus {
+    outline: 3px solid #ffffff;
+    outline-offset: 4px;
+}
+
+/* Active state */
+.cta-button:active {
+    transform: translateY(0);
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    .cta-button {
+        padding: 0.65rem 1.5rem;
+        font-size: 0.875rem;
+    }
+    
+    .overlay {
+        padding-top: 72.5vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-button {
+        padding: 0.6rem 1.25rem;
+        font-size: 0.8125rem;
+    }
+    
+    .overlay {
+        padding: 0.75rem;
+        padding-top: 67.5vh;
+    }
+}
+
+/* Ensure proper contrast and accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .cta-button {
+        transition: none;
+    }
+    
+    .cta-button:hover {
+        transform: none;
+    }
+}
